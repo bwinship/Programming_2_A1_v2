@@ -1,0 +1,13 @@
+User Stories
+•	A player can get a welcome message
+•	A player can exit game
+•	A player can start a new game
+•	If player is randomly selected as dealer, that player can shuffle cards
+•	Player can look at their cards but cannot show other players their cards
+•	If a player is sitting left of the dealer, player goes first
+•	Player can place mineral card on table, declare mineral name, one of the five playing categories and the top value of that category
+•	If it’s the player’s second turn, player can play a card but card must have a higher value in the playing category than the last player
+•	Player can play a trump card, then they can follow the instructions on their card
+•	If the player does not have a higher card to play, player can pass and draw a card from the deck
+•	A player is allowed to pass even if they have a card that can be played
+•	A player can win by being the first person to lose all their cards
