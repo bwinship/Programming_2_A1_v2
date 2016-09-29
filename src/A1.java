@@ -14,7 +14,6 @@ class A1 {
         if (user_choice == 2){
             Exit();
         }
-
     }
 
     private static void Welcome(){
@@ -30,21 +29,23 @@ class A1 {
     private static int Menu_Choice(int user_choice){
         Scanner scan = new Scanner(System.in);
         System.out.print("Please make your choice: ");
-        int user_input = scan.nextInt();
+        user_choice = scan.nextInt();
 
         int pass = 1;
-        while (pass ==1){
-            if (user_input == 1){
-                user_choice = user_input;
-                pass = 0;
-            }
-            if (user_input == 2){
-                user_choice = user_input;
-                pass = 0;
-            }
-            else{
-                System.out.print("Invalid choice! Please try again: ");
-                user_input = scan.nextInt();
+
+        while (pass == 1) {
+            switch (user_choice) {
+                case 1:
+                    user_choice = 1;
+                    pass = 0;
+                    break;
+                case 2:
+                    user_choice = 2;
+                    pass = 0;
+                    break;
+                default:
+                    System.out.print("Invalid choice!!! Please try again");
+                    user_choice = scan.nextInt();
             }
         }
         return user_choice;
@@ -56,21 +57,36 @@ class A1 {
 
     private static void New_Game(){
         int Number_of_Players = Number_of_Players();
-        Is_Dealer();
+        ST_Game game = new ST_Game(Number_of_Players);
+        game.Is_Dealer();
         Deal_Cards();
     }
 
     private static void Deal_Cards(){
 
     }
-    //* If player is randomly selected as dealer, that player can shuffle cards
-    private static void Is_Dealer(){
-
-    }
 
     //*Player can choose number of players
     private static int Number_of_Players(){
-        System.out.println("1. Play Game");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please select number of players (min. 2, max. 5: ");
+        int user_selection = scan.nextInt();
+
+        switch (user_selection){
+            case 1: user_selection = 1;
+                break;
+            case 2: user_selection = 2;
+                break;
+            case 3: user_selection = 3;
+                break;
+            case 4: user_selection = 4;
+                break;
+            case 5: user_selection = 5;
+                break;
+            default: System.out.print("Invalid selection, please select number of players again. (min. 2, max. 5: ");
+                user_selection = scan.nextInt();
+        }
+        return user_selection;
     }
 
     //* Player can look at their cards but cannot show other players their cards
