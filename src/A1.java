@@ -1,5 +1,4 @@
 //* Programming_2 Assignment: By Brandon Winship, 13144404
-import javax.swing.*;
 import java.util.Scanner;
 
 class A1 {
@@ -71,20 +70,10 @@ class A1 {
         Scanner scan = new Scanner(System.in);
         System.out.print("Please select number of players (min. 2, max. 5: ");
         int user_selection = scan.nextInt();
+        int pass = 1;
 
-        switch (user_selection){
-            case 1: user_selection = 1;
-                break;
-            case 2: user_selection = 2;
-                break;
-            case 3: user_selection = 3;
-                break;
-            case 4: user_selection = 4;
-                break;
-            case 5: user_selection = 5;
-                break;
-            default: System.out.print("Invalid selection, please select number of players again. (min. 2, max. 5: ");
-                user_selection = scan.nextInt();
+        while (pass == 1) {
+            if (user_selection >5 || user_selection <1)
         }
         return user_selection;
     }
