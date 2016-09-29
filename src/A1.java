@@ -7,7 +7,14 @@ class A1 {
         int user_choice = 0;
         Welcome();
         Menu();
-        Menu_Choice(user_choice);
+        user_choice = Menu_Choice(user_choice);
+        if (user_choice == 1){
+            New_Game();
+        }
+        if (user_choice == 2){
+            Exit();
+        }
+
     }
 
     private static void Welcome(){
@@ -43,11 +50,28 @@ class A1 {
         return user_choice;
     }
 
+    private static void Exit(){
+        System.out.println("Bye, have a good day!");
+    }
+
+    private static void New_Game(){
+        int Number_of_Players = Number_of_Players();
+        Is_Dealer();
+        Deal_Cards();
+    }
+
+    private static void Deal_Cards(){
+
+    }
     //* If player is randomly selected as dealer, that player can shuffle cards
-    //public static void is_dealer(){
+    private static void Is_Dealer(){
 
-    //}
+    }
 
+    //*Player can choose number of players
+    private static int Number_of_Players(){
+        System.out.println("1. Play Game");
+    }
 
     //* Player can look at their cards but cannot show other players their cards
     // public static void view_player_cards(){
