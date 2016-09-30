@@ -8,7 +8,6 @@ public class ST_Card {
 
 
     public ST_Card(int number){
-
     }
 
     public String To_String(){

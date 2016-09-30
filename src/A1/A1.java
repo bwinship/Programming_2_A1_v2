@@ -7,8 +7,10 @@ class A1 {
         Welcome();
         Menu();
         user_choice = Menu_Choice(user_choice);
+        ST_Game game;
         if (user_choice == 1){
-            New_Game();
+            game = New_Game();
+            game.Begin_Game();
         }
         if (user_choice == 2){
             Exit();
@@ -55,12 +57,16 @@ class A1 {
         System.out.println("Bye, have a good day!");
     }
 
-    private static void New_Game(){
+    private static ST_Game New_Game(){
         int Number_of_Players = Number_of_Players();
         ST_Game game = new ST_Game(Number_of_Players);
         game.Decide_Dealer();
         game.Deal_Cards();
-
+        game.Player_Select();
+        ST_Player Human_Player = game.Human_Player();
+        Print_Player(Human_Player);
+        //game.Begin_Game();
+        return game;
     }
 
 
@@ -83,6 +89,10 @@ class A1 {
         return user_selection;
     }
 
+
+    private static void Print_Player(ST_Player Human_Player){
+        System.out.println("Human Player = " + Human_Player);
+    }
     //* Player can look at their cards but cannot show other players their cards
     // public static void view_player_cards(){
 

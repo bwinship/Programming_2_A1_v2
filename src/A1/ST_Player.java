@@ -17,7 +17,9 @@ public class ST_Player {
         this.player_number = player_number;
     }
 
-    public  String toString(){
-        return "player_number" + player_number;
+    public String toString(){
+        return "" + player_number + "\n cards = " + cards;
     }
+
+    //public int Player_Order(){}
 }
