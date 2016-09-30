@@ -1,4 +1,4 @@
-//* Programming_2 Assignment: By Brandon Winship, 13144404
+package A1;//* Programming_2 Assignment: By Brandon Winship, 13144404
 import java.util.Scanner;
 
 class A1 {
@@ -16,6 +16,7 @@ class A1 {
     }
 
     private static void Welcome(){
+
         System.out.println("Hey, welcome to the Mineral Supertrumps Game!!!");
     }
 
@@ -57,23 +58,27 @@ class A1 {
     private static void New_Game(){
         int Number_of_Players = Number_of_Players();
         ST_Game game = new ST_Game(Number_of_Players);
-        game.Is_Dealer();
-        Deal_Cards();
-    }
-
-    private static void Deal_Cards(){
+        game.Decide_Dealer();
+        game.Deal_Cards();
 
     }
+
 
     //*Player can choose number of players
     private static int Number_of_Players(){
         Scanner scan = new Scanner(System.in);
-        System.out.print("Please select number of players (min. 2, max. 5: ");
+        System.out.print("Please select number of players (min. 2, max. 5): ");
         int user_selection = scan.nextInt();
         int pass = 1;
 
         while (pass == 1) {
-            if (user_selection >5 || user_selection <1)
+            if (user_selection >1 && user_selection <6){
+                pass = 0;
+            }
+            else{
+                System.out.print("Invalid Selection!! Please Try Again (min. 2, max. 5: ");
+                user_selection = scan.nextInt();
+            }
         }
         return user_selection;
     }
