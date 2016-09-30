@@ -4,6 +4,7 @@ import java.util.Scanner;
 class A1 {
     public static void main(String[] args) {
         int user_choice = 0;
+        int No_of_Players_Array[];
         Welcome();
         Menu();
         user_choice = Menu_Choice(user_choice);
@@ -71,7 +72,7 @@ class A1 {
 
 
     //*Player can choose number of players
-    private static int Number_of_Players(){
+    private static int Number_of_Players(int No_of_Players_Array []){
         Scanner scan = new Scanner(System.in);
         System.out.print("Please select number of players (min. 2, max. 5): ");
         int user_selection = scan.nextInt();
@@ -85,6 +86,10 @@ class A1 {
                 System.out.print("Invalid Selection!! Please Try Again (min. 2, max. 5: ");
                 user_selection = scan.nextInt();
             }
+        }
+        switch (user_selection){
+            case 1: user_selection = 2;
+                No_of_Players_Array = new No_of_Players_Array[2];
         }
         return user_selection;
     }

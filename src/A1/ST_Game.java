@@ -12,6 +12,7 @@ public class ST_Game {
     private int Player_Number;
 
 
+
     public ST_Game(int Number_of_players){
         this.Number_of_players = Number_of_players;
         deck = new ST_Deck();
@@ -43,7 +44,7 @@ public class ST_Game {
     public ST_Player Human_Player(){
         return players[Player_Number];
     }
-
+    //* Player can look at their cards but cannot show other players their cards
     public void Begin_Game(){
         int game_active = 0;
         while (game_active == 0){
@@ -52,7 +53,7 @@ public class ST_Game {
             for (int i = 0; i < players.length; i++){
 
                 // check human player
-                //game_active = 1;
+                game_active = 1;
             }
             //Print_Player_Turn();
 
