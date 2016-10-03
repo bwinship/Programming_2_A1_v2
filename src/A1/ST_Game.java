@@ -19,9 +19,9 @@ public class ST_Game {
     }
 
     //* If player is randomly selected as dealer, that player can shuffle cards
-    public int Decide_Dealer(){
+    public int Decide_Dealer(int number_of_players){
         Random random_number = new Random();
-        dealer = random_number.nextInt(5)+1;
+        dealer = random_number.nextInt(number_of_players)+1;
         return dealer;
     }
 
@@ -49,7 +49,14 @@ public class ST_Game {
         int game_active = 0;
         while (game_active == 0){
             System.out.println("Dealer is: " + dealer);
-            System.out.println("The order of turns goes: \n 1. " + dealer + "\n 2. " + Number_of_players);
+            System.out.println("The order of turns goes:");
+            for (int i = dealer+1; i < Number_of_players+dealer+1; i++){
+                if (i == Number_of_players+dealer)
+                    System.out.println((i-dealer) + ". " + ((i%Number_of_players) == 0 ? Number_of_players : i%Number_of_players) + " (Dealer)");
+                else
+                    System.out.println((i-dealer) + ". " + ((i%Number_of_players) == 0 ? Number_of_players : i%Number_of_players));
+            }
+
             for (int i = 0; i < players.length; i++){
 
                 // check human player

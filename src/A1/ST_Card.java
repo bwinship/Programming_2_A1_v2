@@ -22,7 +22,7 @@ public class ST_Card {
 	}
 
 	public String toString() {
-		return "imageName: '" + this.imageName + "', card_type: '" + this.card_type + "', title: '" + this.title + "'";
+		return "imageName: '" + this.imageName + "', card_type: '" + this.card_type + "', title: '" + this.title + "'" + "', occurrence: '" + this.occurrence + "'";
 	}
 
 

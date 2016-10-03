@@ -63,7 +63,7 @@ class A1 {
     private static ST_Game New_Game(){
         ST_Player[] number_of_players = Number_of_Players();
         ST_Game game = new ST_Game(number_of_players.length);
-        game.Decide_Dealer();
+        game.Decide_Dealer(number_of_players.length);
         game.Deal_Cards();
         game.Player_Select();
         ST_Player Human_Player = game.Human_Player();
