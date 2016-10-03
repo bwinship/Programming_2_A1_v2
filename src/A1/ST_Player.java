@@ -18,7 +18,11 @@ public class ST_Player {
     }
 
     public String toString(){
-        return "" + player_number + "\n cards = " + cards;
+        String temp = "" + player_number + "\nCARDS:\n";
+        for (int i = 0; i < cards.size(); i++) {
+            temp += cards.get(i).toString() + "\n";
+        }
+        return temp;
     }
 
     //public int Player_Order(){}

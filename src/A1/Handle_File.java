@@ -17,6 +17,8 @@ public class Handle_File {
 
     public void ST_Read_File(ArrayList cards) {
         try {
+
+            System.out.println("Importing data from: MstCards_151021.plist");
             DOMParser parser = new DOMParser();
             parser.parse("MstCards_151021.plist");
             Document doc = parser.getDocument();
@@ -140,6 +142,7 @@ public class Handle_File {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("Import Complete");
     }
 
 

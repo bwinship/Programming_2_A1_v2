@@ -3,6 +3,8 @@ package A1; /**
  */
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
+
 public class ST_Game {
     private int Number_of_players;
     private int dealer;
@@ -46,8 +48,8 @@ public class ST_Game {
     }
     //* Player can look at their cards but cannot show other players their cards
     public void Begin_Game(){
-        int game_active = 0;
-        while (game_active == 0){
+        boolean game_active = false;
+        while (!game_active){
             System.out.println("Dealer is: " + dealer);
             System.out.println("The order of turns goes:");
             for (int i = dealer+1; i < Number_of_players+dealer+1; i++){
@@ -57,10 +59,50 @@ public class ST_Game {
                     System.out.println((i-dealer) + ". " + ((i%Number_of_players) == 0 ? Number_of_players : i%Number_of_players));
             }
 
+            game_active = true;
+
+            //int starting_player  = (((dealer+1)%Number_of_players) == 0 ? Number_of_players : (dealer+1)%Number_of_players);
+            for (int i = dealer+1; i < Number_of_players+dealer+1; i++){
+                int player_number = i%Number_of_players;
+                if (player_number != 1) {
+                    //Computer Player
+
+                    // Play a card
+
+                    // If No cards out, then play any random card
+
+                    // Else if cards out
+                        //  If have a card that larger then card on table, play card
+                        //  Else Pass and Draw a card
+                            //  If deck is empty (no cards to draw), Game Over- Draw!
+
+
+                    // If No cards left (Won)
+                }
+                else
+                {
+                    // Human Player (Player number == 1)
+
+                    // Play a card
+
+                    // If No cards out, then allow play of any card
+
+                    // Else if cards out
+                        //  If have a card that larger then card on table, allow playing of that card
+                        //  Else if no cards can be played Pass and Draw a card
+                            //  If deck is empty (no cards to draw), Game Over- Draw!
+
+
+                    // If No cards left (Won)
+
+                }
+
+
+            }
             for (int i = 0; i < players.length; i++){
 
                 // check human player
-                game_active = 1;
+
             }
             //Print_Player_Turn();
 
