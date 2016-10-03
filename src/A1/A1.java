@@ -1,4 +1,6 @@
 package A1;//* Programming_2 Assignment: By Brandon Winship, 13144404
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class A1 {
@@ -59,8 +61,8 @@ class A1 {
     }
 
     private static ST_Game New_Game(){
-        int Number_of_Players = Number_of_Players();
-        ST_Game game = new ST_Game(Number_of_Players);
+        ST_Player[] number_of_players = Number_of_Players();
+        ST_Game game = new ST_Game(number_of_players.length);
         game.Decide_Dealer();
         game.Deal_Cards();
         game.Player_Select();
@@ -72,26 +74,24 @@ class A1 {
 
 
     //*Player can choose number of players
-    private static int Number_of_Players(int No_of_Players_Array []){
+    private static ST_Player[] Number_of_Players(){
         Scanner scan = new Scanner(System.in);
         System.out.print("Please select number of players (min. 2, max. 5): ");
         int user_selection = scan.nextInt();
-        int pass = 1;
+        boolean pass = false;
 
-        while (pass == 1) {
+        while (!pass) {
             if (user_selection >1 && user_selection <6){
-                pass = 0;
+                pass = true;
             }
             else{
                 System.out.print("Invalid Selection!! Please Try Again (min. 2, max. 5: ");
                 user_selection = scan.nextInt();
             }
         }
-        switch (user_selection){
-            case 1: user_selection = 2;
-                No_of_Players_Array = new No_of_Players_Array[2];
-        }
-        return user_selection;
+        ST_Player[] No_of_Players_Array = new ST_Player[user_selection];
+        return No_of_Players_Array;
+
     }
 
 

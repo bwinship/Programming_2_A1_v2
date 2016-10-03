@@ -14,10 +14,11 @@ public class ST_Deck {
 
     public ST_Deck(){
         cards = new ArrayList<ST_Card>();
-
-        for (int i = 0; i < NUMBER_OF_CARDS_IN_DECK; i ++){
-            cards.add(new ST_Card(i));
-        }
+        Handle_File load_file = new Handle_File();
+        load_file.ST_Read_File(cards);
+        //for (int i = 0; i < NUMBER_OF_CARDS_IN_DECK; i ++){
+        //    cards.add(new ST_Card());
+        //}
     }
 
     public ArrayList<ST_Card> deal_cards(int Number_of_Cards){
