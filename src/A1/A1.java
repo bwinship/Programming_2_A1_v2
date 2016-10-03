@@ -22,7 +22,7 @@ class A1 {
 
     private static void Welcome(){
 
-        System.out.println("Hey, welcome to the Mineral Supertrumps Game!!!");
+        System.out.println("Hey, Welcome to the Mineral Supertrumps Game!!!");
     }
 
     //* A player can exit game or start a new game

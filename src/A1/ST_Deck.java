@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class ST_Deck {
     private static final int NUMBER_OF_CARDS_IN_DECK = 60;
-    private ArrayList<ST_Card> cards;
+    public ArrayList<ST_Card> cards;
 
     // list all cards
 
