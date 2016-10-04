@@ -17,7 +17,7 @@ public class Handle_File {
 
     public void ST_Read_File(ArrayList cards) {
         try {
-            System.out.println("Importing data from: MstCards_151021.plist");
+            System.out.println("Importing data from: MstCards_151021.plist \n");
             DOMParser parser = new DOMParser();
             parser.parse("MstCards_151021.plist");
             Document doc = parser.getDocument();

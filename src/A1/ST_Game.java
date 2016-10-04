@@ -2,6 +2,7 @@ package A1; /**
  * Created by jc314116 on 29/09/16.
  */
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -63,14 +64,14 @@ public class ST_Game {
                 int stack = 0;
                 if (player_number != 1) {
                     System.out.println("Player (Computer)'s Turn!");
-                    // Play a card
+                    Computer_Plays_Card();
                    // if (stack == 0){
                      //   Computer_Plays_Random_Card();
                    //}
                     // If No cards out, then play any random card
 
                     // Else if cards out
-                        //  If have a card that larger then card on table, play card
+                        //  If have a card that larger then card on table, play card and declare random attribute
                         //  Else Pass and Draw a card
                             //  If deck is empty (no cards to draw), Game Over- Draw!
 
@@ -79,7 +80,8 @@ public class ST_Game {
                 }
                 else
                 {
-                    // Human Player (Player number == 1)
+                    System.out.println("Your Turn");
+                    Human_Player_Plays_Card();
                     // Play a card
                     // If No cards out, then allow play of any card
                     // Else if cards out
@@ -122,6 +124,29 @@ public class ST_Game {
         random_card = random_card.nextInt();
 
     }*/
+
+    private void Computer_Plays_Card(){
+
+    }
+    private void Human_Player_Plays_Card(){
+        String human_card_choice;
+        Scanner scan = new Scanner(System.in);
+        boolean valid_card_choice = false;
+        while (valid_card_choice = false){
+            System.out.print("Which card would you like to play? Or type pass to pass");
+            human_card_choice = scan.nextLine();
+            //compare human_card_choice against dictionary array
+            //if the human_card_choice is in array
+                //if
+                    //put card on stack
+                    //valid_card_choice = true;
+            //if human_card_category does not trump category of previous card
+                //System.out.println("Invalid card selection! Your card category doesn't trump the previous card category!");
+                //System.out.print("Please select another card or enter pass to pass");
+            //else
+                //System.out.println("Invalid selection! You either do not have this card or entered it incorrectly, please try again")
+        }
+    }
 }
 
 
