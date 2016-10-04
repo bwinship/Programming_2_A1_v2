@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class ST_Player {
     private ArrayList<ST_Card> cards;
     private String player_number;
+    private int number_of_players;
 
     public void deal_cards(ArrayList<ST_Card> cards){
         this.cards = cards;
@@ -17,6 +18,10 @@ public class ST_Player {
         this.player_number = player_number;
     }
 
+    public void ST_Game(int number_of_players){
+        this.number_of_players = number_of_players;
+    }
+
     public String toString(){
         String temp = "" + player_number + "\nCARDS:\n";
         for (int i = 0; i < cards.size(); i++) {
@@ -24,6 +29,4 @@ public class ST_Player {
         }
         return temp;
     }
-
-    //public int Player_Order(){}
 }

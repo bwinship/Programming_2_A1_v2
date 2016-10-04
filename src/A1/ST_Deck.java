@@ -9,18 +9,11 @@ import java.util.Random;
 public class ST_Deck {
     private static final int NUMBER_OF_CARDS_IN_DECK = 60;
     public ArrayList<ST_Card> cards;
-
-    // list all cards
-
     public ST_Deck(){
         cards = new ArrayList<ST_Card>();
         Handle_File load_file = new Handle_File();
         load_file.ST_Read_File(cards);
-        //for (int i = 0; i < NUMBER_OF_CARDS_IN_DECK; i ++){
-        //    cards.add(new ST_Card());
-        //}
     }
-
     public ArrayList<ST_Card> deal_cards(int Number_of_Cards){
         ArrayList<ST_Card> result = new ArrayList<ST_Card>();
         for (int i = 0; i < Number_of_Cards; i++){
