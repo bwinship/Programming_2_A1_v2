@@ -29,4 +29,7 @@ public class ST_Player {
         }
         return temp;
     }
+//    private void Play_Card(){
+//        cards.remove(human_card_choice);
+//    }
 }

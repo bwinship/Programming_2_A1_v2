@@ -83,28 +83,30 @@ public class ST_Game {
                     System.out.println("Your Turn");
                     Human_Player_Plays_Card();
                     // Play a card
-                    // If No cards out, then allow play of any card
-                    // Else if cards out
-                        //  If have a card has a larger attribute then card on table, allow playing of that card
-                            //declare random attribute
-                        //  Else if no cards can be played Pass and Draw a card
-                            // if computer has passed
-                                //while continue = false
-                                    //if number of players ==2
-                                        //if player has had a turn
-                                            //continue = true
-                                    //if number of players == 3
-                                        //if 1 other player player has passed
-                                        //continue = true
-                                    //if number of players == 4
-                                        //if 2 other players have passed
-                                        //continue = true
-                                    //if number of players == 5
-                                        //if 3 other players have passed
-                                        // continue = true
-                            //  If deck is empty (no cards to draw), Game Over- Draw!
-                    // If No cards left in hand (Won)
-                }
+//                    if (no_cards){
+//                        , then allow play of any card
+//                    }
+//                     Else if cards out
+//                          If have a card has a larger attribute then card on table, allow playing of that card
+//                            declare random attribute
+//                          Else if no cards can be played Pass and Draw a card
+//                             if computer has passed
+//                                while continue = false
+//                                    if number of players ==2
+//                                        if player has had a turn
+//                                            continue = true
+//                                    if number of players == 3
+//                                        if 1 other player player has passed
+//                                        continue = true
+//                                    if number of players == 4
+//                                        if 2 other players have passed
+//                                        continue = true
+//                                    if number of players == 5
+//                                        if 3 other players have passed
+//                                         continue = true
+//                              If deck is empty (no cards to draw), Game Over- Draw!
+//                     If No cards left in hand (Won)
+//                }
 
 
             //}
@@ -130,12 +132,21 @@ public class ST_Game {
     }
     private void Human_Player_Plays_Card(){
         String human_card_choice;
+        boolean does_card_exist;
         Scanner scan = new Scanner(System.in);
         boolean valid_card_choice = false;
+        boolean found_card = false;
         while (valid_card_choice = false){
             System.out.print("Which card would you like to play? Or type pass to pass");
             human_card_choice = scan.nextLine();
+            human_card_choice = human_card_choice.toUpperCase();
+            for (int j = 0; !found_card && j != players.length; j++){
+                if (){
+                }
+            }
+
             //compare human_card_choice against dictionary array
+
             //if the human_card_choice is in array
                 //if
                     //put card on stack
